@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/img/RLG_logo_black.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/aos.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Ricardo L. Garcia - Homepage</title>
 </head>
@@ -18,19 +20,14 @@
                 <ul class="nav_list">
                     <li class="nav_item"><a href="#" class="nav_link">Home</a></li>
                     <li class="nav_item"><a href="#" class="nav_link">About me</a></li>
-                    <li class="nav_item"><a href="#" class="nav_link">Works</a></li>
+                    <li class="nav_item"><a href="#works" class="nav_link">Works</a></li>
                 </ul>
-                <!-- <button class="hamburger_menu_btn">
-                    <span class="hamburger_menu_btn_line"></span>
-                    <span class="hamburger_menu_btn_line"></span>
-                    <span class="hamburger_menu_btn_line"></span>
-                </button> -->
             </div>
         </div>
     </nav>
 
 
-    <section class="hero" id="hero">
+    <section class="hero" id="hero" data-aos="fade-right" data-aos-duration="1500">
         <div class="container">
             <div class="hero_content">
                 <span class="hero_name">Hello! I'm Ricardo L. Garcia</span>
@@ -41,9 +38,9 @@
         </div>
     </section>
 
-    <section class="works" id="works">
+    <section class="works" id="works" data-aos="fade-up" data-aos-duration="1500">
         <div class="container">
-            <div class="works_content">
+            <div class="works_content work_content">
                 <h1 class="works_title">Works</h1>
                 <div class="works_list">
 
@@ -53,8 +50,12 @@
                             <div class="works_category_item">
                                 <img src="./assets/img/web_design/philosophers_apparel_web_design.jpg"
                                     alt="philosophers_apparel_web_design" class="works_category_item_img">
-                                <a href="#" class="view_work_link">View work</a>
-                                <a href="#" class="see_more_link">See more</a>
+                                <a href="#" class="view_work_link">View work <img
+                                        src="./assets/img/up_right_arrow_icon.png" alt="up_right_arrow_icon"
+                                        class="up_right_arrow_icon"></a>
+                                <a href="./pages/web_design.html" class="see_more_link">See more <img
+                                        src="./assets/img/up_right_arrow_icon.png" alt="up_right_arrow_icon"
+                                        class="up_right_arrow_icon"></a>
                             </div>
                         </div>
                     </div>
@@ -65,20 +66,28 @@
                             <div class="works_category_item">
                                 <img src="./assets/img/app_design/flash_bank_app_design.jpg"
                                     alt="philosophers_apparel_web_design" class="works_category_item_img">
-                                <a href="#" class="view_work_link">View work</a>
-                                <a href="#" class="see_more_link">See more</a>
+                                <a href="#" class="view_work_link">View work <img
+                                        src="./assets/img/up_right_arrow_icon.png" alt="up_right_arrow_icon"
+                                        class="up_right_arrow_icon"></a>
+                                <a href="./pages/app_design.html" class="see_more_link">See more <img
+                                        src="./assets/img/up_right_arrow_icon.png" alt="up_right_arrow_icon"
+                                        class="up_right_arrow_icon"></a>
                             </div>
                         </div>
                     </div>
 
                     <div class="works_category">
-                        <h1 class="works_category_title">Front End</h1>
+                        <h1 class="works_category_title">Front-End Development</h1>
                         <div class="works_category_list">
                             <div class="works_category_item">
-                                <img src="./assets/img/front_end/dash_front_end.JPG"
-                                    alt="philosophers_apparel_web_design" class="works_category_item_img">
-                                <a href="#" class="view_work_link">View work</a>
-                                <a href="#" class="see_more_link">See more</a>
+                                <img src="./assets/img/front_end_development/groove_app_front_end.jpg"
+                                    alt="groove_app_front_end" class="works_category_item_img">
+                                <a href="#" class="view_work_link">View work <img
+                                        src="./assets/img/up_right_arrow_icon.png" alt="up_right_arrow_icon"
+                                        class="up_right_arrow_icon"></a>
+                                <a href="./pages/front_end_development.html" class="see_more_link">See more <img
+                                        src="./assets/img/up_right_arrow_icon.png" alt="up_right_arrow_icon"
+                                        class="up_right_arrow_icon"></a>
                             </div>
                         </div>
                     </div>
@@ -89,7 +98,9 @@
                             <div class="works_category_item">
                                 <img src="./assets/img/graphic_design/flow_g_poster_design.jpg"
                                     alt="philosophers_apparel_web_design" class="works_category_item_img">
-                                <a href="#" class="see_more_link">See more</a>
+                                <a href="./pages/graphic_design.html" class="see_more_link">See more <img
+                                        src="./assets/img/up_right_arrow_icon.png" alt="up_right_arrow_icon"
+                                        class="up_right_arrow_icon"></a>
                             </div>
                         </div>
                     </div>
@@ -100,29 +111,18 @@
         </div>
     </section>
 
-    <!-- 
+
     <footer class="footer" id="footer">
         <div class="container">
             <div class="footer_content">
-                <div class="contacts">
-                    <ul class="sm_list">
-                        <li class="sm_item"><a href="#" class="sm_link">Email</a></li>
-                        <li class="sm_item"><a href="#" class="sm_link">Facebook</a></li>
-                        <li class="sm_item"><a href="#" class="sm_link">Instagram</a></li>
-                        <li class="sm_item"><a href="#" class="sm_link">Twitter</a></li>
-                        <li class="sm_item"><a href="#" class="sm_link">Github</a></li>
-                    </ul>
-                    <ul class="email_and_phone_no">
-                        <li class="contact_item">ricardolacadgarcia@gmail.com</li>
-                        <li class="contact_item">(+63) 920 - 8188 - 119</li>
-                    </ul>
-                </div>
                 <p class="copy">Designed and Developed by Ricardo L. Garcia. All rights reserved 2023.</p>
             </div>
         </div>
-    </footer> -->
+    </footer>
 
     <script src="./js/main.js"></script>
+    <script src="./js/aos.js"></script>
+    <script>AOS.init();</script>
 </body>
 
 </html>
