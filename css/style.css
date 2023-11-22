@@ -3,6 +3,7 @@
     --cl-1: #161616;
     --cl-2: #e0e0e0;
     --cl-3: #be33ff;
+    --cl-4: #323232;
 
     --fs-1: 13rem;
     --fs-2: 4rem;
@@ -197,6 +198,12 @@ a
     margin-top: 10px;
 }
 
+.works .works_content .works_list .works_category .works_category_list .works_category_item .works_category_item_img
+{
+    border-radius: 3px;
+}
+
+
 .works .works_content .works_list .works_category .works_category_title
 {
     font-size: var(--fs-3);
@@ -243,12 +250,11 @@ a
     margin-block: 100px;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
-
 }
 
 .about_me .about_me_content .about_me_img
 {
-    max-width: 400px;
+    max-width: 450px;
 }
 
 .about_me .about_me_content .about_me_text 
@@ -262,11 +268,29 @@ a
     font-size: var(--fs-2);
 }
 
+.about_me .about_me_content .about_me_text .about_me_p,
+.about_me .about_me_content .about_me_text .skills_and_tools .front_end_tech, .tools, .soft_skills
+{
+    color: var(--cl-4);
+}
 
-.skills_and_tools 
+.about_me .about_me_content .about_me_text .skills_and_tools 
 {
     margin-top: 30px;
 }
+
+.about_me .about_me_content .about_me_text .dl_resume 
+{
+    padding: 10px 30px;
+    background-color: var(--cl-1);
+    display: inline-block;
+    color: var(--cl-2);
+    margin-top: 30px;
+    border-radius: 3px;
+}
+
+
+
 /* FOOTER */
 .footer .footer_content 
 {
