@@ -325,7 +325,7 @@ a
 @media screen and (max-width: 768px) {
     :root
     {
-        --fs-1: 8rem;
+        --fs-1: 10rem;
         --fs-2: 5rem;
     }
     
