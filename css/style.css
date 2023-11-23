@@ -2,13 +2,12 @@
 {
     --cl-1: #161616;
     --cl-2: #e0e0e0;
-    --cl-3: #be33ff;
-    --cl-4: #323232;
+    --cl-3: #202020;
 
-    --fs-1: 13rem;
-    --fs-2: 4rem;
-    --fs-3: 2rem;
-    --fs-4: 1.3rem;
+    --fs-1: 20rem;
+    --fs-2: 10rem;
+    --fs-3: 3rem;
+    --fs-4: 2rem;
 
     --fw-regular: 400;
     --fw-bold: 700;
@@ -21,18 +20,28 @@
 }
 
 @font-face {
-    font-family: trouble;
-    src: url("../assets/font/trouble.ttf") format("truetype");
+    font-family: sorren_ex;
+    src: url("../assets/font/sorren_ex_medium.otf") format("truetype");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: sorren_ex;
+    src: url("../assets/font/sorren_ex_bold.otf") format("opentype");
     font-style: normal;
     font-weight: 700;
 }
 
-/* @font-face {
+@font-face {
     font-family: hoves_pro;
     src: url("../assets/font/hoves_pro_regular.ttf") format("truetype");
     font-style: normal;
     font-weight: 400;
-} */
+}
+
+
+
 
 
 
@@ -41,17 +50,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: var(--cl-1);
-    font-family: trouble;
+    color: var(--cl-2);
+    font-family: sorren_ex;
+    font-weight: var(--fw-regular);
 }
 
 html { scroll-behavior: smooth; }
 body 
 {
-    background-image: url("../assets/img/main_bg.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+background-color: var(--cl-1);
     background-attachment: fixed;
 }
 
@@ -78,15 +85,17 @@ a
 
 .highlight 
 {
-    color: var(--cl-3);
+    /* color: var(--cl-3);
     background: var(--bg-rg);
     -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
+    -webkit-background-clip: text; */
+    text-decoration:double;
 }
 
 .title 
 {
     font-size: var(--fs-2);
+    font-weight: var(--fw-bold);
 }
 
 .view_work_link,
@@ -94,6 +103,7 @@ a
 {
     margin-top: 10px;
     font-size: var(--fs-4);
+    text-decoration: underline;
 }
 
 .see_more_link
@@ -123,8 +133,7 @@ a
 .nav .nav_content .nav_list
 {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    gap: 20px;
     text-align: right;
 }
 
@@ -142,7 +151,7 @@ a
     background-color: var(--cl-2);
     display: block;
     position: absolute;
-    top: 12px;
+    top: 50%;
     transition-duration: 0.5s;
 }
 
@@ -165,15 +174,16 @@ a
 
 .hero .hero_content .hero_position
 {
+    line-height: 0.8;
     font-size: var(--fs-1);
-    line-height: 1;
+    font-weight: var(--fw-bold);
 }
 
 
 /* WORKS */
 .works .works_content 
 {
-    background-color: var(--cl-2);
+    background-color: var(--cl-3);
     padding: 20px;
     margin-block: 100px;
     border-radius: 5px;
@@ -209,13 +219,14 @@ a
 .works .works_content .works_list .works_category .works_category_title
 {
     font-size: var(--fs-3);
+    font-weight: var(--fw-bold);
 }
 
 
 /* WORK */
 .work .work_content
 {
-    background-color: var(--cl-2);
+    background-color: var(--cl-3);
     padding: 20px;
     margin-block: 100px;
     border-radius: 5px;
@@ -242,7 +253,7 @@ a
     align-items: center;
     justify-content: center;    
     gap: 30px;
-    background-color: var(--cl-2);
+    background-color: var(--cl-3);
     padding: 20px;
     margin-block: 100px;
     border-radius: 5px;
@@ -258,13 +269,6 @@ a
 .about_me .about_me_content .about_me_text 
 {
     font-size: var(--fs-4);
-    line-height: 1.7;
-}
-
-.about_me .about_me_content .about_me_text .about_me_p,
-.about_me .about_me_content .about_me_text .skills_and_tools .front_end_tech, .tools, .soft_skills
-{
-    color: var(--cl-4);
 }
 
 .about_me .about_me_content .about_me_text .skills_and_tools 
@@ -272,14 +276,12 @@ a
     margin-top: 30px;
 }
 
-.about_me .about_me_content .about_me_text .dl_resume 
+.about_me .about_me_content .about_me_text .dl_resume_link
 {
-    padding: 10px 30px;
-    background-color: var(--cl-1);
     display: inline-block;
-    color: var(--cl-2);
     margin-top: 30px;
-    border-radius: 3px;
+    color: var(--cl-2);
+    text-decoration: underline;
 }
 
 
@@ -323,7 +325,8 @@ a
 @media screen and (max-width: 768px) {
     :root
     {
-        --fs-1: 6.5rem;
+        --fs-1: 8rem;
+        --fs-2: 5rem;
     }
     
     .work .work_content .work_list
