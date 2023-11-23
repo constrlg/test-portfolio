@@ -13,11 +13,11 @@
     --fw-regular: 400;
     --fw-bold: 700;
 
-    --bg-rg: radial-gradient(at 79% 11%, hsla(279,92%,41%,1) 0px, transparent 50%),
-    radial-gradient(at 31% 34%, hsla(277,98%,50%,1) 0px, transparent 50%),
-    radial-gradient(at 0% 100%, hsla(289,77%,33%,1) 0px, transparent 50%),
-    radial-gradient(at 80% 100%, hsla(264,90%,43%,1) 0px, transparent 50%),
-    radial-gradient(at 0% 0%, hsla(264,73%,42%,1) 0px, transparent 50%);
+    --bg-rg: radial-gradient(at 79% 11%, hsla(279,92%,41%,1) 0px, transparent 100%),
+    radial-gradient(at 31% 34%, hsla(277,98%,50%,1) 0px, transparent 100%),
+    radial-gradient(at 0% 100%, hsla(289,77%,33%,1) 0px, transparent 100%),
+    radial-gradient(at 80% 100%, hsla(264,90%,43%,1) 0px, transparent 100%),
+    radial-gradient(at 0% 0%, hsla(264,73%,42%,1) 0px, transparent 100%);
 }
 
 @font-face {
@@ -48,15 +48,16 @@
 html { scroll-behavior: smooth; }
 body 
 {
-    background-color: var(--cl-3);
-    background-image: var(--bg-rg);
+    background-image: url("../assets/img/main_bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-attachment: fixed;
 }
 
 img 
 {
     width: 100%;
-    display: block;
 }
 
 ul 
@@ -83,14 +84,16 @@ a
     -webkit-background-clip: text;
 }
 
+.title 
+{
+    font-size: var(--fs-2);
+}
+
 .view_work_link,
 .see_more_link
 {
     margin-top: 10px;
     font-size: var(--fs-4);
-    display: flex;
-    align-items: center;
-    column-gap: 10px;
 }
 
 .see_more_link
@@ -181,7 +184,6 @@ a
 
 .works .works_content .works_title 
 {
-    font-size: var(--fs-2);
     text-align: center;
 }
 
@@ -220,11 +222,6 @@ a
     box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
-.work .work_content .work_title 
-{
-    font-size: var(--fs-2);
-}
-
 .work .work_content .work_list
 {
     display: grid;
@@ -255,17 +252,13 @@ a
 .about_me .about_me_content .about_me_img
 {
     max-width: 450px;
+    border-radius: 3px;
 }
 
 .about_me .about_me_content .about_me_text 
 {
     font-size: var(--fs-4);
     line-height: 1.7;
-}
-
-.about_me .about_me_content .about_me_text .about_me_title 
-{
-    font-size: var(--fs-2);
 }
 
 .about_me .about_me_content .about_me_text .about_me_p,
@@ -290,12 +283,36 @@ a
 }
 
 
+.get_in_touch .get_in_touch_content
+{
+    text-align: center;
+}
+
+.get_in_touch .get_in_touch_content .social_media_list 
+{
+    margin-top: 20px;
+    font-size: var(--fs-3);
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.get_in_touch .get_in_touch_content .social_media_list .social_media_item
+{
+    text-decoration: underline;
+}
+
+.get_in_touch .get_in_touch_content .contact_list
+{
+    margin-top: 30px;
+    font-size: var(--fs-3);
+}
 
 /* FOOTER */
 .footer .footer_content 
 {
     text-align: center;
-    margin-block: 20px;
+    margin-block: 50px;
 }
 
 .footer .footer_content .copy 
@@ -306,7 +323,7 @@ a
 @media screen and (max-width: 768px) {
     :root
     {
-        --fs-1: 7rem;
+        --fs-1: 6.5rem;
     }
     
     .work .work_content .work_list
@@ -317,6 +334,12 @@ a
     .about_me .about_me_content 
     {
         flex-direction: column;
+    }
+
+    .get_in_touch .get_in_touch_content .social_media_list,
+    .get_in_touch .get_in_touch_content .contact_list
+    {
+        font-size: var(--fs-4);
     }
 }
 
